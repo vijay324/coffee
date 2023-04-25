@@ -509,6 +509,7 @@ img {
 /*=============== FOOTER ===============*/
 .footer {
   background-color: var(--white-color);
+  position: relative;
 }
 
 .footer__bg {
@@ -624,11 +625,11 @@ img {
 }
 
 .footer__bg-img{
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100;
+  height: 100%;
   object-fit: cover;
   object-position: -172px;
   opacity: .15;
@@ -637,11 +638,13 @@ img {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
+  border-radius: .5rem;
   background-color: hsl(12, 8%, 65%);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: hsl(12, 8%, 45%);
+  border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -774,7 +777,7 @@ img {
     width: 450px;
   }
   .home__data{
-    /* text-align: initial; */
+    text-align: initial;
   }
   .home__title img{
     width: 120px;
@@ -940,5 +943,35 @@ img {
 @media screen and (min-width: 1152px) {
   .container {
     margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .home__container {
+    column-gap: 4.5rem;
+  }
+
+  .home__img {
+    width: 550px;
+  }
+
+  .products__container {
+    column-gap: 9rem;
+  }
+
+  .about__container {
+    column-gap: 6.5rem;
+  }
+
+  .about__img {
+    width: 550px;
+  }
+
+  .testimonial__container {
+    column-gap: 2rem;
+  }
+
+  .testimonial__img {
+    width: 550px;
   }
 }
